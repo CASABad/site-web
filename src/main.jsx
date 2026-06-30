@@ -172,7 +172,7 @@ function HomePage() {
       <section className="section schedule-section">
         <div className="section-heading-row">
           <div>
-            <p className="eyebrow dark">Saison 2025-2026</p>
+            <p className="eyebrow dark">Saison 2026-2027</p>
             <h2>Lieux d'entrainement et horaires</h2>
           </div>
           <CalendarDays size={32} />
@@ -211,7 +211,7 @@ function ScheduleTable() {
     <div className="schedule-card" aria-label="Horaires des seances">
       <div className="schedule-card-header">
         <h3>Horaires des seances</h3>
-        <span>Mise a jour saison 2025-2026</span>
+        <span>Mise a jour saison 2026-2027</span>
       </div>
       <div className="schedule-table-wrap">
         <table className="schedule-table">
