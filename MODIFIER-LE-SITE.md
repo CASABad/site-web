@@ -27,6 +27,21 @@ export const contactInfo = {
 
 Quand l'association aura une adresse officielle, remplacer par exemple `contact.casabad@gmail.com` par `contact@casabad.fr`.
 
+## Modifier les horaires
+
+Dans `src/siteData.js`, changer les lignes dans `scheduleRows` :
+
+```js
+{
+  day: 'Mardi',
+  activity: 'Jeu libre',
+  place: 'Espace Jose Escanez',
+  time: '21h - 23h',
+},
+```
+
+Le tableau de la page d'accueil se mettra a jour automatiquement.
+
 ## Ajouter un partenaire
 
 1. Mettre le logo dans `public/assets/`.

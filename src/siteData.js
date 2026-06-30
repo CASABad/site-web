@@ -13,6 +13,33 @@ export const contactInfo = {
   renewalUrl: 'https://myffbad.fr/connexion',
 };
 
+export const scheduleRows = [
+  {
+    day: 'Mardi',
+    activity: 'Jeu libre',
+    place: 'Espace Jose Escanez',
+    time: '21h - 23h',
+  },
+  {
+    day: 'Mercredi',
+    activity: 'Entrainement, jeu libre',
+    place: 'Espace Jose Escanez',
+    time: '20h - 23h',
+  },
+  {
+    day: 'Jeudi',
+    activity: 'Entrainement competition',
+    place: 'Espace Jose Escanez',
+    time: '19h - 23h',
+  },
+  {
+    day: 'Samedi',
+    activity: 'Jeu libre et en famille',
+    place: 'Espace Jose Escanez',
+    time: '10h - 13h',
+  },
+];
+
 export const partners = [
   ['Brice Bouyer', 'partenaire-brice-bouyer.png', 'https://www.iadfrance.fr/conseiller-immobilier/brice.bouyer'],
   ['InterSport Sisteron', 'partenaire-intersport.png', 'https://www.intersport-sisteron.com/'],

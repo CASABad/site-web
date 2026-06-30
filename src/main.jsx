@@ -20,6 +20,7 @@ import {
   mediaAlbums,
   navItems,
   partners,
+  scheduleRows,
   textileImages,
 } from './siteData.js';
 import './styles.css';
@@ -176,7 +177,7 @@ function HomePage() {
           </div>
           <CalendarDays size={32} />
         </div>
-        <img className="wide-document" src={asset('horaires-2025-2026.jpg')} alt="Horaires CASA'Bad 2025-2026" />
+        <ScheduleTable />
         <div className="location-band">
           <img src={asset('espace-jose-escanez.png')} alt="Espace Jose Escanez" />
           <div>
@@ -202,6 +203,39 @@ function HomePage() {
 
       <ClubNetworkSection />
     </>
+  );
+}
+
+function ScheduleTable() {
+  return (
+    <div className="schedule-card" aria-label="Horaires des seances">
+      <div className="schedule-card-header">
+        <h3>Horaires des seances</h3>
+        <span>Mise a jour saison 2025-2026</span>
+      </div>
+      <div className="schedule-table-wrap">
+        <table className="schedule-table">
+          <thead>
+            <tr>
+              <th>Jour</th>
+              <th>Activites</th>
+              <th>Lieux</th>
+              <th>Horaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            {scheduleRows.map((row) => (
+              <tr key={row.day}>
+                <th scope="row">{row.day}</th>
+                <td>{row.activity}</td>
+                <td>{row.place}</td>
+                <td>{row.time}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 

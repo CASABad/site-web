@@ -321,6 +321,78 @@ p {
   box-shadow: var(--shadow);
 }
 
+.schedule-card {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.schedule-card-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.schedule-card-header h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.6vw, 2.25rem);
+  line-height: 1;
+}
+
+.schedule-card-header span {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.schedule-table thead th {
+  background: #f0eeee;
+  color: var(--ink);
+  font-weight: 950;
+}
+
+.schedule-table tbody th {
+  width: 140px;
+  color: var(--red);
+  font-weight: 950;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: #fff8f8;
+}
+
+.schedule-table tbody tr:last-child th,
+.schedule-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .location-band {
   margin-top: 18px;
   padding: 18px;
@@ -902,5 +974,14 @@ p {
 
   .section-heading-row {
     align-items: flex-start;
+  }
+
+  .schedule-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .schedule-card-header span {
+    white-space: normal;
   }
 }
