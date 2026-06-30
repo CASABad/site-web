@@ -5,6 +5,8 @@ import {
   CalendarDays,
   Check,
   ChevronRight,
+  Facebook,
+  Instagram,
   Mail,
   MapPin,
   Menu,
@@ -317,6 +319,9 @@ function ClubNetworkSection() {
           tourner le badminton local avec nous, saison apres saison.
         </p>
         <SocialSection />
+        <a className="partner-cta" href="#contact">
+          Devenir partenaire <ArrowRight size={18} />
+        </a>
       </div>
       <div className="network-carousels">
         <LogoCarousel title="Nos partenaires" items={partners} />
@@ -326,11 +331,11 @@ function ClubNetworkSection() {
   );
 }
 
-function LogoCarousel({ title, items }) {
+function LogoCarousel({ title, items, compact = false }) {
   const loopItems = [...items, ...items];
 
   return (
-    <section className="logo-carousel" aria-label={title}>
+    <section className={`logo-carousel ${compact ? 'compact' : ''}`} aria-label={title}>
       <h2>{title}</h2>
       <div className="carousel-window">
         <div className="carousel-track">
@@ -346,24 +351,34 @@ function LogoCarousel({ title, items }) {
 }
 
 function SocialSection() {
+  const socials = [
+    {
+      name: 'Instagram',
+      handle: '@casabad_04',
+      href: 'https://www.instagram.com/casabad_04/',
+      icon: <Instagram size={22} />,
+    },
+    {
+      name: 'Facebook',
+      handle: "CASA'Bad",
+      href: 'https://www.facebook.com/p/CASABad-100091382750148/',
+      icon: <Facebook size={22} />,
+    },
+  ];
+
   return (
     <section className="social-section">
       <h2>Suivez-nous</h2>
       <div className="social-links">
-        <a href="https://www.instagram.com/casabad_04/" target="_blank" rel="noreferrer">
-          <img src={asset('instagram.jpg')} alt="Instagram CASA'Bad" loading="lazy" />
-          <span>
-            <strong>Instagram</strong>
-            @casabad_04
-          </span>
-        </a>
-        <a href="https://www.facebook.com/p/CASABad-100091382750148/" target="_blank" rel="noreferrer">
-          <img src={asset('facebook.jpg')} alt="Facebook CASA'Bad" loading="lazy" />
-          <span>
-            <strong>Facebook</strong>
-            CASA'Bad
-          </span>
-        </a>
+        {socials.map((social) => (
+          <a key={social.name} href={social.href} target="_blank" rel="noreferrer">
+            <span className="social-icon">{social.icon}</span>
+            <span>
+              <strong>{social.name}</strong>
+              {social.handle}
+            </span>
+          </a>
+        ))}
       </div>
     </section>
   );
@@ -521,11 +536,24 @@ function PageShell({ eyebrow, title, intro, children, heroImage = 'media-1.jpg',
 function Footer() {
   return (
     <footer className="site-footer">
-      <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
-      <div>
+      <a className="footer-brand" href="#accueil" aria-label="Accueil CASA'Bad">
+        <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
+      </a>
+      <div className="footer-center">
+        <strong>CASA'Bad</strong>
         <p>Association Sportive Badminton - Alpes-de-Haute-Provence</p>
       </div>
-      <a href="#contact">Contact</a>
+      <div className="footer-links">
+        <a className="footer-action" href="#contact">Nous contacter</a>
+        <div className="footer-socials" aria-label="Reseaux sociaux">
+          <a href="https://www.instagram.com/casabad_04/" target="_blank" rel="noreferrer" aria-label="Instagram CASA'Bad">
+            <Instagram size={18} />
+          </a>
+          <a href="https://www.facebook.com/p/CASABad-100091382750148/" target="_blank" rel="noreferrer" aria-label="Facebook CASA'Bad">
+            <Facebook size={18} />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
