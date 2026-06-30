@@ -20,6 +20,7 @@ import {
   mediaAlbums,
   navItems,
   partners,
+  pricingInfo,
   scheduleRows,
   textileImages,
 } from './siteData.js';
@@ -189,8 +190,8 @@ function HomePage() {
 
       <section className="section pricing-section">
         <p className="eyebrow dark">Adhesion</p>
-        <h2>Tarifs saison 2025-2026</h2>
-        <img className="wide-document" src={asset('tarifs-2025-2026.jpg')} alt="Tarifs CASA'Bad 2025-2026" />
+        <h2>Tarifs saison {pricingInfo.season}</h2>
+        <PricingTables />
         <div className="button-row">
           <a className="primary-button" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
             Nouvelle licence <ArrowRight size={18} />
@@ -203,6 +204,63 @@ function HomePage() {
 
       <ClubNetworkSection />
     </>
+  );
+}
+
+function PricingTables() {
+  return (
+    <div className="pricing-card">
+      <div className="pricing-intro">
+        {pricingInfo.intro.map((text) => (
+          <p key={text}>{text}</p>
+        ))}
+      </div>
+      <div className="pricing-table-wrap">
+        <table className="pricing-table licenses-table">
+          <thead>
+            <tr>
+              <th>Licence</th>
+              <th>Age requis</th>
+              <th>Tarif</th>
+              <th>Accessibilite</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pricingInfo.licenses.map((license) => (
+              <tr key={license.name}>
+                <th scope="row">{license.name}</th>
+                <td>{license.age}</td>
+                <td className="price-cell">{license.price}</td>
+                <td>{license.accessibility}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Avantages</h3>
+      <div className="pricing-table-wrap">
+        <table className="pricing-table benefits-table">
+          <thead>
+            <tr>
+              <th>Avantage</th>
+              <th>Montant</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pricingInfo.benefits.map((benefit) => (
+              <tr key={benefit.name}>
+                <th scope="row">{benefit.name}</th>
+                <td className="price-cell">{benefit.amount}</td>
+                <td>{benefit.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="pricing-note">{pricingInfo.note}</p>
+    </div>
   );
 }
 

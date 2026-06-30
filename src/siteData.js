@@ -40,6 +40,53 @@ export const scheduleRows = [
   },
 ];
 
+export const pricingInfo = {
+  season: '2025-2026',
+  intro: [
+    "La cotisation d'adhesion inclut la licence federale FFBad avec son assurance en responsabilite civile standard, ainsi que l'adhesion au club.",
+    "Le certificat medical n'est pas obligatoire sous reserve de repondre favorablement au questionnaire de sante.",
+  ],
+  licenses: [
+    {
+      name: 'Adulte',
+      age: 'A partir de 18 ans',
+      price: '130 €',
+      accessibility: 'Acces a tous les creneaux et aux entrainements diriges pour le creneau competiteurs, acces sous condition.',
+    },
+    {
+      name: 'Jeune',
+      age: '16 - 18 ans',
+      price: '100 €',
+      accessibility: 'Acces a tous les creneaux et aux entrainements diriges pour le creneau competiteurs, acces sous condition, voir directement avec le club.',
+    },
+    {
+      name: 'Enfant',
+      age: '8 - 16 ans',
+      price: '60 €',
+      accessibility: "Samedi matin en jeu libre uniquement et sous la responsabilite d'un adulte licencie au club et designe par le parent.",
+    },
+    {
+      name: 'Exterieure',
+      age: 'Joueur licencie dans un autre club affilie FFBad',
+      price: '60 €',
+      accessibility: "Acces a la pratique de loisir mardi, mercredi et samedi, sans acces aux horaires d'entrainements diriges.",
+    },
+  ],
+  benefits: [
+    {
+      name: 'e-PASS jeunes (Region Sud)',
+      amount: '',
+      description: "Le e-PASS jeune de la region est pris en compte ; le club procede au remboursement de l'aide directement au joueur une fois celle-ci percue.",
+    },
+    {
+      name: 'Avantage famille',
+      amount: '5 €',
+      description: "La reduction est appliquee sur chaque licence supplementaire a partir de la deuxieme licence souscrite pour un meme foyer.",
+    },
+  ],
+  note: 'Les reductions sont cumulables.',
+};
+
 export const partners = [
   ['Brice Bouyer', 'partenaire-brice-bouyer.png', 'https://www.iadfrance.fr/conseiller-immobilier/brice.bouyer'],
   ['InterSport Sisteron', 'partenaire-intersport.png', 'https://www.intersport-sisteron.com/'],

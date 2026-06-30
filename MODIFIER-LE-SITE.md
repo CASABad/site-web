@@ -42,6 +42,17 @@ Dans `src/siteData.js`, changer les lignes dans `scheduleRows` :
 
 Le tableau de la page d'accueil se mettra a jour automatiquement.
 
+## Modifier les tarifs
+
+Dans `src/siteData.js`, changer les valeurs dans `pricingInfo` :
+
+- `season` pour le titre de saison.
+- `licenses` pour les licences, ages, tarifs et accessibilite.
+- `benefits` pour les avantages.
+- `note` pour la phrase en bas du tableau.
+
+Le tableau de la page d'accueil se mettra a jour automatiquement.
+
 ## Ajouter un partenaire
 
 1. Mettre le logo dans `public/assets/`.
