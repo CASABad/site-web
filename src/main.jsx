@@ -14,148 +14,15 @@ import {
   Users,
   X,
 } from 'lucide-react';
+import {
+  affiliations,
+  contactInfo,
+  mediaAlbums,
+  navItems,
+  partners,
+  textileImages,
+} from './siteData.js';
 import './styles.css';
-
-const navItems = [
-  { id: 'accueil', label: 'Accueil' },
-  { id: 'textiles', label: 'Textiles club' },
-  { id: 'medias', label: 'Medias' },
-  { id: 'contact', label: 'Contact' },
-];
-
-const partners = [
-  ['Brice Bouyer', 'partenaire-brice-bouyer.png', 'https://www.iadfrance.fr/conseiller-immobilier/brice.bouyer'],
-  ['InterSport Sisteron', 'partenaire-intersport.png', 'https://www.intersport-sisteron.com/'],
-  ['Super U Sisteron', 'partenaire-superu.png', 'https://www.magasins-u.com/magasin/superu-sisteron'],
-  ['Payan Espaces Verts', 'partenaire-payan.jpg', 'https://www.facebook.com/p/PAYAN-Espaces-Verts-100091738812182/'],
-  ['Lesbros', 'partenaire-lesbros.png', 'https://www.dekra-norisko.fr/dekra/controle-technique/chateau-arnoux-saint-auban,04160/avenue-de-blaches-gombert?S004D036'],
-  ['Alpes Piscine Services', 'partenaire-aps.png', 'https://www.aps04.com/'],
-  ['Dekra Chateau-Arnoux', 'partenaire-dekra.png', 'https://www.dekra-norisko.fr/dekra/controle-technique/chateau-arnoux-saint-auban,04160/avenue-de-blaches-gombert?S004D036'],
-  ['Ferronnerie Lecocq', 'partenaire-lecocq.png', 'https://www.ferronnerie-lecocq-04.fr/'],
-];
-
-const affiliations = [
-  ['FFBad', 'affiliation-ffbad.png', 'https://www.ffbad.org/'],
-  ['Badminton Ligue Sud', 'affiliation-sudbad.png', 'https://sudbad.fr/'],
-  ['Bad04', 'affiliation-bad04.jpg', 'https://myffbad.fr/club/2423'],
-];
-
-const mediaImages = ['media-1.jpg', 'media-2.jpg', 'media-3.jpg', 'media-4.jpg', 'media-5.jpg'];
-const instagramSeason2025Images = [
-  'instagram/instagram-01.jpg',
-  'instagram/instagram-02.jpg',
-  'instagram/instagram-05.jpg',
-  'instagram/instagram-06.jpg',
-  'instagram/instagram-07.jpg',
-  'instagram/instagram-08.jpg',
-  'instagram/instagram-09.jpg',
-  'instagram/instagram-10.jpg',
-  'instagram/instagram-11.jpg',
-  'instagram/instagram-12.jpg',
-  'instagram/instagram-13.jpg',
-  'instagram/instagram-14.jpg',
-  'instagram/instagram-15.jpg',
-  'instagram/instagram-17.jpg',
-];
-const plumes2026Images = [
-  'plumes-2026/plumes-2026-01.jpeg',
-  'plumes-2026/plumes-2026-02.jpeg',
-  'plumes-2026/plumes-2026-03.jpeg',
-  'plumes-2026/plumes-2026-04.jpeg',
-  'plumes-2026/plumes-2026-05.jpeg',
-  'plumes-2026/plumes-2026-06.jpeg',
-  'plumes-2026/plumes-2026-07.jpeg',
-  'plumes-2026/plumes-2026-08.jpeg',
-  'plumes-2026/plumes-2026-09.jpeg',
-  'plumes-2026/plumes-2026-10.jpeg',
-  'plumes-2026/plumes-2026-11.jpeg',
-  'plumes-2026/plumes-2026-12.jpeg',
-  'plumes-2026/plumes-2026-13.jpeg',
-  'plumes-2026/plumes-2026-14.jpeg',
-  'plumes-2026/plumes-2026-15.jpeg',
-  'plumes-2026/plumes-2026-16.jpeg',
-  'plumes-2026/plumes-2026-17.jpeg',
-  'plumes-2026/plumes-2026-18.jpeg',
-  'plumes-2026/plumes-2026-19.jpeg',
-  'plumes-2026/plumes-2026-20.jpeg',
-  'plumes-2026/plumes-2026-21.jpeg',
-  'plumes-2026/plumes-2026-22.jpeg',
-  'plumes-2026/plumes-2026-23.jpeg',
-  'plumes-2026/plumes-2026-24.jpeg',
-  'plumes-2026/plumes-2026-25.jpeg',
-  'plumes-2026/plumes-2026-26.jpeg',
-  'plumes-2026/plumes-2026-27.jpeg',
-  'plumes-2026/plumes-2026-28.jpeg',
-  'plumes-2026/plumes-2026-29.jpeg',
-  'plumes-2026/plumes-2026-30.jpeg',
-  'plumes-2026/plumes-2026-31.jpeg',
-  'plumes-2026/plumes-2026-32.jpeg',
-  'plumes-2026/plumes-2026-33.jpeg',
-  'plumes-2026/plumes-2026-34.jpeg',
-  'plumes-2026/plumes-2026-35.jpeg',
-  'plumes-2026/plumes-2026-36.jpeg',
-  'plumes-2026/plumes-2026-37.jpeg',
-  'plumes-2026/plumes-2026-38.jpeg',
-  'plumes-2026/plumes-2026-39.jpeg',
-  'plumes-2026/plumes-2026-40.jpeg',
-  'plumes-2026/plumes-2026-41.jpeg',
-  'plumes-2026/plumes-2026-42.jpeg',
-  'plumes-2026/plumes-2026-43.jpeg',
-  'plumes-2026/plumes-2026-44.jpeg',
-  'plumes-2026/plumes-2026-45.jpeg',
-  'plumes-2026/plumes-2026-46.jpeg',
-  'plumes-2026/plumes-2026-47.jpeg',
-  'plumes-2026/plumes-2026-48.jpeg',
-  'plumes-2026/plumes-2026-49.jpeg',
-  'plumes-2026/plumes-2026-50.jpeg',
-  'plumes-2026/plumes-2026-51.jpeg',
-];
-const textileImages = ['textile-1.png', 'textile-2.png', 'textile-3.png', 'textile-4.png'];
-
-const mediaAlbums = [
-  {
-    id: 'saison-2025-2026',
-    group: 'Saisons',
-    label: 'Saison 2025-2026',
-    title: 'Saison 2025-2026',
-    images: instagramSeason2025Images,
-  },
-  {
-    id: 'plumes-2026',
-    group: 'Tournois',
-    label: 'Les Plumes 2026',
-    title: 'Les Plumes 2026',
-    images: plumes2026Images,
-  },
-  {
-    id: 'saison-2024-2025',
-    group: 'Saisons',
-    label: 'Saison 2024-2025',
-    title: 'Saison 2024-2025',
-    images: [],
-  },
-  {
-    id: 'plumes-2025',
-    group: 'Tournois',
-    label: 'Les Plumes 2025',
-    title: 'Les Plumes 2025',
-    images: [],
-  },
-  {
-    id: 'saison-2023-2024',
-    group: 'Saisons',
-    label: 'Saison 2023-2024',
-    title: 'Saison 2023-2024',
-    images: mediaImages,
-  },
-  {
-    id: 'plumes-2024',
-    group: 'Tournois',
-    label: 'Les Plumes 2024',
-    title: 'Les Plumes 2024',
-    images: [],
-  },
-];
 
 function asset(name) {
   return `/assets/${name}`;
@@ -207,7 +74,7 @@ function Header({ active, menuOpen, setMenuOpen }) {
             {item.label}
           </a>
         ))}
-        <a className="license-link" href="https://adherer.myffbad.fr/cb04" target="_blank" rel="noreferrer">
+        <a className="license-link" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
           Prise de licence
         </a>
       </nav>
@@ -232,7 +99,7 @@ function HomePage() {
             dans les Alpes-de-Haute-Provence.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="https://adherer.myffbad.fr/cb04" target="_blank" rel="noreferrer">
+            <a className="primary-button" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
               Prendre une licence <ArrowRight size={18} />
             </a>
             <a className="secondary-button" href="#contact">
@@ -286,6 +153,21 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="tryout-band" aria-label="Essai au club">
+        <div>
+          <p className="eyebrow">Envie d'essayer ?</p>
+          <h2>3 seances pour decouvrir le club avant de se lancer.</h2>
+        </div>
+        <div className="tryout-actions">
+          <a className="secondary-button" href="#contact">
+            Poser une question
+          </a>
+          <a className="primary-button" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
+            Voir la licence <ArrowRight size={18} />
+          </a>
+        </div>
+      </section>
+
       <section className="section schedule-section">
         <div className="section-heading-row">
           <div>
@@ -309,10 +191,10 @@ function HomePage() {
         <h2>Tarifs saison 2025-2026</h2>
         <img className="wide-document" src={asset('tarifs-2025-2026.jpg')} alt="Tarifs CASA'Bad 2025-2026" />
         <div className="button-row">
-          <a className="primary-button" href="https://adherer.myffbad.fr/cb04" target="_blank" rel="noreferrer">
+          <a className="primary-button" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
             Nouvelle licence <ArrowRight size={18} />
           </a>
-          <a className="secondary-button dark" href="https://myffbad.fr/connexion" target="_blank" rel="noreferrer">
+          <a className="secondary-button dark" href={contactInfo.renewalUrl} target="_blank" rel="noreferrer">
             Renouvellement
           </a>
         </div>
@@ -362,7 +244,7 @@ function LogoCarousel({ title, items }) {
         <div className="carousel-track">
           {loopItems.map(([name, image, href], index) => (
             <a key={`${name}-${index}`} className="logo-tile" href={href} target="_blank" rel="noreferrer" aria-label={name}>
-              <img src={asset(image)} alt={name} />
+              <img src={asset(image)} alt={name} loading="lazy" />
             </a>
           ))}
         </div>
@@ -377,14 +259,14 @@ function SocialSection() {
       <h2>Suivez-nous</h2>
       <div className="social-links">
         <a href="https://www.instagram.com/casabad_04/" target="_blank" rel="noreferrer">
-          <img src={asset('instagram.jpg')} alt="Instagram CASA'Bad" />
+          <img src={asset('instagram.jpg')} alt="Instagram CASA'Bad" loading="lazy" />
           <span>
             <strong>Instagram</strong>
             @casabad_04
           </span>
         </a>
         <a href="https://www.facebook.com/p/CASABad-100091382750148/" target="_blank" rel="noreferrer">
-          <img src={asset('facebook.jpg')} alt="Facebook CASA'Bad" />
+          <img src={asset('facebook.jpg')} alt="Facebook CASA'Bad" loading="lazy" />
           <span>
             <strong>Facebook</strong>
             CASA'Bad
@@ -406,7 +288,7 @@ function TextilesPage() {
     >
       <div className="masonry textiles">
         {textileImages.map((image, index) => (
-          <img key={image} src={asset(image)} alt={`Textile club CASA'Bad ${index + 1}`} />
+          <img key={image} src={asset(image)} alt={`Textile club CASA'Bad ${index + 1}`} loading="lazy" />
         ))}
       </div>
     </PageShell>
@@ -470,27 +352,27 @@ function MediasPage() {
 
 function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const mailto = `mailto:contact.casabad@gmail.com?subject=${encodeURIComponent(form.subject || 'Contact CASA Bad')}&body=${encodeURIComponent(`Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+  const mailto = `mailto:${contactInfo.email}?subject=${encodeURIComponent(form.subject || 'Contact CASA Bad')}&body=${encodeURIComponent(`Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
 
   return (
     <PageShell eyebrow="Contact" title="Nous contacter" intro="Une question sur les essais, les horaires, l'inscription ou les competitions ? Ecrivez-nous directement.">
       <section className="contact-layout">
         <div className="contact-methods">
-          <a href="mailto:contact.casabad@gmail.com">
+          <a href={`mailto:${contactInfo.email}`}>
             <Mail size={22} />
             <span>
               <strong>Email de contact</strong>
-              contact.casabad@gmail.com
+              {contactInfo.email}
             </span>
           </a>
-          <a href="tel:+33620789121">
+          <a href={`tel:${contactInfo.phoneHref}`}>
             <Phone size={22} />
             <span>
               <strong>Contact telephonique</strong>
-              06 20 78 91 21
+              {contactInfo.phoneLabel}
             </span>
           </a>
-          <a href="https://adherer.myffbad.fr/cb04" target="_blank" rel="noreferrer">
+          <a href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
             <ChevronRight size={22} />
             <span>
               <strong>Prise de licence</strong>

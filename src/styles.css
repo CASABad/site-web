@@ -120,8 +120,8 @@ img {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(7, 18, 11, 0.88) 0%, rgba(7, 18, 11, 0.62) 42%, rgba(7, 18, 11, 0.12) 100%),
-    linear-gradient(0deg, rgba(7, 18, 11, 0.82) 0%, rgba(7, 18, 11, 0) 44%);
+    linear-gradient(90deg, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.66) 42%, rgba(17, 17, 17, 0.12) 100%),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.84) 0%, rgba(17, 17, 17, 0) 44%);
 }
 
 .hero-content {
@@ -267,6 +267,37 @@ p {
 
 .offer-card svg {
   color: var(--red);
+}
+
+.tryout-band {
+  width: min(1180px, calc(100% - 36px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin: 0 auto clamp(58px, 8vw, 96px);
+  padding: clamp(22px, 4vw, 34px);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.tryout-band .eyebrow {
+  margin-bottom: 8px;
+}
+
+.tryout-band h2 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  line-height: 1;
+}
+
+.tryout-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .section-heading-row,
@@ -770,7 +801,7 @@ p {
   }
 
   .hero-overlay {
-    background: linear-gradient(0deg, rgba(7, 18, 11, 0.9) 0%, rgba(7, 18, 11, 0.46) 100%);
+    background: linear-gradient(0deg, rgba(17, 17, 17, 0.9) 0%, rgba(17, 17, 17, 0.46) 100%);
   }
 
   .quick-strip,
@@ -791,9 +822,14 @@ p {
   }
 
   .location-band,
+  .tryout-band,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .tryout-actions {
+    width: 100%;
   }
 
   .location-band img {
