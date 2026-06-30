@@ -10,6 +10,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  Music,
   Phone,
   Shirt,
   Trophy,
@@ -414,6 +415,7 @@ function MediasPage() {
       heroImage="hero-medias.jpeg"
       heroPosition="center"
     >
+      <ClubMusicCard />
       <div className="album-groups">
         {['Saisons', 'Tournois'].map((group) => (
           <div className="album-group" key={group}>
@@ -454,6 +456,24 @@ function MediasPage() {
         </div>
       )}
     </PageShell>
+  );
+}
+
+function ClubMusicCard() {
+  return (
+    <section className="club-music" aria-label="Musique du club">
+      <img src={asset('audio/casa-bad-cover.jpeg')} alt="Cover de la musique CASA'Bad" loading="lazy" />
+      <div className="club-music-content">
+        <p className="eyebrow dark">Musique du club</p>
+        <h2>CASA'Bad</h2>
+        <p>La bande son officielle du club, a ecouter avant les entrainements, les rencontres et les tournois.</p>
+        <audio controls preload="metadata">
+          <source src={asset('audio/casa-bad.mp3')} type="audio/mpeg" />
+          Votre navigateur ne peut pas lire ce fichier audio.
+        </audio>
+      </div>
+      <Music className="club-music-icon" size={32} aria-hidden="true" />
+    </section>
   );
 }
 
