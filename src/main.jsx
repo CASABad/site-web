@@ -103,14 +103,6 @@ function HomePage() {
             Un club adulte convivial pour progresser, transpirer, jouer en loisir ou en competition
             dans les Alpes-de-Haute-Provence.
           </p>
-          <div className="hero-actions">
-            <a className="primary-button" href={contactInfo.licenseUrl} target="_blank" rel="noreferrer">
-              Prendre une licence <ArrowRight size={18} />
-            </a>
-            <a className="secondary-button" href="#contact">
-              Nous contacter
-            </a>
-          </div>
         </div>
       </section>
 
@@ -240,6 +232,26 @@ function PricingTables() {
           </tbody>
         </table>
       </div>
+      <div className="mobile-card-list licenses-mobile-list" aria-label="Tarifs des licences">
+        {pricingInfo.licenses.map((license) => (
+          <article className="mobile-data-card" key={license.name}>
+            <div className="mobile-data-card-title">
+              <h4>{license.name}</h4>
+              <strong>{license.price}</strong>
+            </div>
+            <dl>
+              <div>
+                <dt>Age requis</dt>
+                <dd>{license.age}</dd>
+              </div>
+              <div>
+                <dt>Accessibilite</dt>
+                <dd>{license.accessibility}</dd>
+              </div>
+            </dl>
+          </article>
+        ))}
+      </div>
 
       <h3>Avantages</h3>
       <div className="pricing-table-wrap">
@@ -261,6 +273,17 @@ function PricingTables() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="mobile-card-list benefits-mobile-list" aria-label="Avantages">
+        {pricingInfo.benefits.map((benefit) => (
+          <article className="mobile-data-card" key={benefit.name}>
+            <div className="mobile-data-card-title">
+              <h4>{benefit.name}</h4>
+              {benefit.amount ? <strong>{benefit.amount}</strong> : null}
+            </div>
+            <p>{benefit.description}</p>
+          </article>
+        ))}
       </div>
       <p className="pricing-note">{pricingInfo.note}</p>
     </div>
@@ -295,6 +318,26 @@ function ScheduleTable() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="mobile-card-list schedule-mobile-list" aria-label="Horaires des seances">
+        {scheduleRows.map((row) => (
+          <article className="mobile-data-card schedule-mobile-card" key={row.day}>
+            <div className="mobile-data-card-title">
+              <h4>{row.day}</h4>
+              <strong>{row.time}</strong>
+            </div>
+            <dl>
+              <div>
+                <dt>Activites</dt>
+                <dd>{row.activity}</dd>
+              </div>
+              <div>
+                <dt>Lieu</dt>
+                <dd>{row.place}</dd>
+              </div>
+            </dl>
+          </article>
+        ))}
       </div>
     </div>
   );
@@ -556,12 +599,11 @@ function PageShell({ eyebrow, title, intro, children, heroImage = 'media-1.jpg',
 function Footer() {
   return (
     <footer className="site-footer">
-      <a className="footer-brand" href="#accueil" aria-label="Accueil CASA'Bad">
-        <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
-      </a>
-      <div className="footer-center">
-        <strong>CASA'Bad</strong>
-        <p>Association Sportive Badminton - Alpes-de-Haute-Provence</p>
+      <div className="footer-identity">
+        <a className="footer-brand" href="#accueil" aria-label="Accueil CASA'Bad">
+          <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
+        </a>
+        <p className="footer-center">Association Sportive Badminton - Alpes-de-Haute-Provence</p>
       </div>
       <div className="footer-links">
         <a className="footer-action" href="#contact">Nous contacter</a>

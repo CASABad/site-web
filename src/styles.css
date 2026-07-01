@@ -420,6 +420,10 @@ p {
   overflow-x: auto;
 }
 
+.mobile-card-list {
+  display: none;
+}
+
 .pricing-table {
   width: 100%;
   min-width: 760px;
@@ -955,7 +959,7 @@ p {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(160px, 0.8fr) minmax(220px, 1.2fr) minmax(220px, 0.8fr);
+  grid-template-columns: minmax(260px, 1.4fr) minmax(220px, 0.8fr);
   align-items: center;
   gap: 24px;
   padding: 26px clamp(18px, 5vw, 70px);
@@ -963,7 +967,14 @@ p {
   background: var(--white);
 }
 
+.footer-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .footer-brand {
+  flex: 0 0 auto;
   width: fit-content;
 }
 
@@ -975,7 +986,9 @@ p {
 }
 
 .footer-center {
-  text-align: center;
+  margin: 0;
+  color: var(--muted);
+  text-align: left;
 }
 
 .footer-center strong {
@@ -1068,8 +1081,15 @@ p {
   }
 
   .hero {
-    min-height: 720px;
-    height: auto;
+    min-height: 0;
+    height: calc(100svh - 82px);
+    max-height: 720px;
+    align-items: end;
+  }
+
+  .hero-image {
+    object-fit: cover;
+    object-position: center top;
   }
 
   .hero-overlay {
@@ -1082,6 +1102,10 @@ p {
   .contact-layout,
   .club-network {
     grid-template-columns: 1fr;
+  }
+
+  .quick-strip {
+    display: none;
   }
 
   .network-intro {
@@ -1097,8 +1121,27 @@ p {
     border-bottom: 1px solid var(--line);
   }
 
+  .offer-grid {
+    gap: 10px;
+  }
+
   .offer-card {
-    min-height: 92px;
+    min-height: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .offer-card svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
+  }
+
+  .offer-card span {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .location-band,
@@ -1110,10 +1153,6 @@ p {
   .site-footer {
     grid-template-columns: 1fr;
     justify-items: start;
-  }
-
-  .footer-center {
-    text-align: left;
   }
 
   .footer-links {
@@ -1159,6 +1198,80 @@ p {
   .club-music > img {
     width: min(220px, 100%);
   }
+
+  .schedule-table-wrap,
+  .pricing-table-wrap {
+    display: none;
+  }
+
+  .mobile-card-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .mobile-data-card {
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  .schedule-mobile-list {
+    padding: 14px;
+  }
+
+  .schedule-mobile-card:nth-child(even),
+  .licenses-mobile-list .mobile-data-card:nth-child(even),
+  .benefits-mobile-list .mobile-data-card:nth-child(even) {
+    background: #fff8f8;
+  }
+
+  .mobile-data-card-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobile-data-card h4 {
+    margin: 0;
+    color: var(--red);
+    font-size: 1.15rem;
+    line-height: 1.15;
+  }
+
+  .mobile-data-card-title strong {
+    color: var(--ink);
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .mobile-data-card dl {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .mobile-data-card dl > div {
+    display: grid;
+    gap: 3px;
+  }
+
+  .mobile-data-card dt {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .mobile-data-card dd,
+  .mobile-data-card p {
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.45;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1175,11 +1288,27 @@ p {
   }
 
   .hero {
-    min-height: 720px;
+    height: calc(100svh - 74px);
+    max-height: 640px;
   }
 
   .hero h1 {
-    font-size: 3.7rem;
+    font-size: 3.2rem;
+  }
+
+  .hero p:not(.eyebrow),
+  .section h2,
+  .split-section h2,
+  .tryout-band h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .hero p:not(.eyebrow) {
+    font-size: 1.02rem;
+  }
+
+  .hero-content {
+    padding: 34px 18px 38px;
   }
 
   .hero-actions,
@@ -1194,6 +1323,21 @@ p {
 
   .section {
     width: min(100% - 28px, 1180px);
+  }
+
+  .split-section h2,
+  .section h2 {
+    font-size: 1.8rem;
+    line-height: 1.08;
+  }
+
+  .offer-card {
+    font-size: 0.95rem;
+  }
+
+  .tryout-band h2 {
+    font-size: 1.5rem;
+    line-height: 1.08;
   }
 
   .section-heading-row {
