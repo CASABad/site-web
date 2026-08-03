@@ -262,39 +262,6 @@ function PricingTables() {
         ))}
       </div>
 
-      <h3>Avantages</h3>
-      <div className="pricing-table-wrap">
-        <table className="pricing-table benefits-table">
-          <thead>
-            <tr>
-              <th>Avantage</th>
-              <th>Montant</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {pricingInfo.benefits.map((benefit) => (
-              <tr key={benefit.name}>
-                <th scope="row">{benefit.name}</th>
-                <td className="price-cell">{benefit.amount}</td>
-                <td>{benefit.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="mobile-card-list benefits-mobile-list" aria-label="Avantages">
-        {pricingInfo.benefits.map((benefit) => (
-          <article className="mobile-data-card" key={benefit.name}>
-            <div className="mobile-data-card-title">
-              <h4>{benefit.name}</h4>
-              {benefit.amount ? <strong>{benefit.amount}</strong> : null}
-            </div>
-            <p>{benefit.description}</p>
-          </article>
-        ))}
-      </div>
-      <p className="pricing-note">{pricingInfo.note}</p>
     </div>
   );
 }

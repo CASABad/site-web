@@ -105,26 +105,27 @@ export const pricingInfo = {
       ],
       accessibility: [
         'Mardi et mercredi : accès pour les jeunes compétiteurs autonomes âgés de 13 ans et plus.',
-        "Samedi : accès à l'école de bad et/ou jeu libre.",
+        "Samedi : accès à l'école de badminton et/ou jeu libre.",
         'Jeudi : sous réserve de participation aux championnats par équipes interclubs.',
         'Accès aux avantages tarifaires sur les volants, cordages et textiles.',
         'Accès aux soirées convivialité.',
       ],
     },
-  ],
-  benefits: [
     {
-      name: 'e-PASS jeunes (Région Sud)',
-      amount: '',
-      description: "Le e-PASS jeune de la région est pris en compte ; le club procède au remboursement de l'aide directement au joueur une fois celle-ci perçue.",
-    },
-    {
-      name: 'Avantage famille',
-      amount: '5 €',
-      description: "La réduction est appliquée sur chaque licence supplémentaire à partir de la deuxième licence souscrite pour un même foyer.",
+      name: 'Adhésion simple',
+      age: 'Avoir une licence active dans un autre club pour la saison 2026-2027.',
+      price: [
+        '100 € pour une adhésion prise entre le 1er septembre 2026 et le 31 janvier 2027.',
+        '60 € du 1er février au 30 avril 2027.',
+        '40 € du 1er mai au 31 août 2027.',
+      ],
+      accessibility: [
+        'Mardi, mercredi à partir de 21h15 et samedi.',
+        'Accès aux avantages tarifaires sur les textiles clubs, hors maillots compétition.',
+        'Accès aux soirées convivialité.',
+      ],
     },
   ],
-  note: 'Les réductions sont cumulables.',
 };
 
 export const partners = [
