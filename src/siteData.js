@@ -147,7 +147,6 @@ export const affiliations = [
 
 export const textileImages = [
   'textiles-2025-2027/textiles-2025-2027-01.jpg',
-  'textiles-2025-2027/textiles-2025-2027-02.jpg',
   'textiles-2025-2027/textiles-2025-2027-03.jpg',
 ];
 
