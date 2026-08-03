@@ -179,6 +179,13 @@ function HomePage() {
             <h3>Espace José Escanez</h3>
             <p>Le lieu d'entraînement principal du club pour la saison.</p>
           </div>
+          <iframe
+            className="location-map"
+            title="Carte de l'Espace José Escanez"
+            src="https://www.google.com/maps?q=Espace%20Jos%C3%A9%20Escanez%2C%20Ch%C3%A2teau-Arnoux-Saint-Auban&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
 
