@@ -72,35 +72,44 @@ export const scheduleRows = [
 ];
 
 export const pricingInfo = {
-  season: '2025-2026',
+  season: '2026-2027',
   intro: [
     "La cotisation d'adhésion inclut la licence fédérale FFBad avec son assurance en responsabilité civile standard, ainsi que l'adhésion au club.",
-    "Le certificat médical n'est pas obligatoire sous réserve de répondre favorablement au questionnaire de santé.",
+    "Un questionnaire de santé lors de la prise de licence déterminera si un certificat médical est requis ou non.",
+    "Toute licence acquise sera valable jusqu'au 31 août 2027.",
   ],
   licenses: [
     {
       name: 'Adulte',
-      age: 'À partir de 18 ans',
-      price: '130 €',
-      accessibility: 'Accès à tous les créneaux et aux entraînements dirigés pour le créneau compétiteurs, accès sous condition.',
+      age: 'Être âgé de 18 ans au 1er septembre 2026.',
+      price: [
+        '130 € pour une licence prise entre le 1er septembre 2026 et le 31 janvier 2027.',
+        '100 € du 1er février au 30 avril 2027.',
+        '40 € du 1er mai au 31 août 2027.',
+      ],
+      accessibility: [
+        'Mardi, mercredi et samedi : accès libre.',
+        'Jeudi : sous réserve de participation aux championnats par équipes interclubs.',
+        'Accès aux avantages tarifaires sur les volants, cordages et textiles.',
+        'Accès aux soirées convivialité.',
+      ],
     },
     {
       name: 'Jeune',
-      age: '16 - 18 ans',
-      price: '100 €',
-      accessibility: 'Accès à tous les créneaux et aux entraînements dirigés pour le créneau compétiteurs, accès sous condition, voir directement avec le club.',
-    },
-    {
-      name: 'Enfant',
-      age: '8 - 16 ans',
-      price: '60 €',
-      accessibility: "Samedi matin en jeu libre uniquement et sous la responsabilité d'un adulte licencié au club et désigné par le parent.",
-    },
-    {
-      name: 'Extérieure',
-      age: 'Joueur licencié dans un autre club affilié FFBad',
-      price: '60 €',
-      accessibility: "Accès à la pratique de loisir mardi, mercredi et samedi, sans accès aux horaires d'entraînements dirigés.",
+      age: 'Être âgé de 8 à 18 ans.',
+      price: [
+        'Le club est éligible au Pass Sport, dispositif d’allocation de rentrée sportive de 70 €.',
+        '100 € pour une licence prise entre le 1er septembre 2026 et le 31 janvier 2027.',
+        '80 € du 1er février au 30 avril 2027.',
+        '40 € du 1er mai au 31 août 2027.',
+      ],
+      accessibility: [
+        'Mardi et mercredi : accès pour les jeunes compétiteurs autonomes âgés de 13 ans et plus.',
+        "Samedi : accès à l'école de bad et/ou jeu libre.",
+        'Jeudi : sous réserve de participation aux championnats par équipes interclubs.',
+        'Accès aux avantages tarifaires sur les volants, cordages et textiles.',
+        'Accès aux soirées convivialité.',
+      ],
     },
   ],
   benefits: [

@@ -221,9 +221,9 @@ function PricingTables() {
           <thead>
             <tr>
               <th>Licence</th>
-              <th>Âge requis</th>
+              <th>Public</th>
               <th>Tarif</th>
-              <th>Accessibilité</th>
+              <th>Accès et avantages</th>
             </tr>
           </thead>
           <tbody>
@@ -231,8 +231,8 @@ function PricingTables() {
               <tr key={license.name}>
                 <th scope="row">{license.name}</th>
                 <td>{license.age}</td>
-                <td className="price-cell">{license.price}</td>
-                <td>{license.accessibility}</td>
+                <td className="price-cell"><TextLines items={license.price} /></td>
+                <td><TextLines items={license.accessibility} /></td>
               </tr>
             ))}
           </tbody>
@@ -243,16 +243,19 @@ function PricingTables() {
           <article className="mobile-data-card" key={license.name}>
             <div className="mobile-data-card-title">
               <h4>{license.name}</h4>
-              <strong>{license.price}</strong>
             </div>
             <dl>
               <div>
-                <dt>Âge requis</dt>
+                <dt>Public</dt>
                 <dd>{license.age}</dd>
               </div>
               <div>
-                <dt>Accessibilité</dt>
-                <dd>{license.accessibility}</dd>
+                <dt>Tarif</dt>
+                <dd><TextLines items={license.price} /></dd>
+              </div>
+              <div>
+                <dt>Accès et avantages</dt>
+                <dd><TextLines items={license.accessibility} /></dd>
               </div>
             </dl>
           </article>
@@ -293,6 +296,18 @@ function PricingTables() {
       </div>
       <p className="pricing-note">{pricingInfo.note}</p>
     </div>
+  );
+}
+
+function TextLines({ items }) {
+  if (!Array.isArray(items)) return items;
+
+  return (
+    <ul className="pricing-list">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
   );
 }
 
