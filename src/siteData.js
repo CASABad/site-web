@@ -43,12 +43,12 @@ export const scheduleRows = [
     day: 'Jeudi',
     sessions: [
       {
-        activity: 'Entraînement compétiteur interclubs',
+        activity: 'Entraînement compétiteurs interclubs',
         time: '19h - 20h45',
         courts: '7 terrains',
       },
       {
-        activity: 'Match compétiteur interclubs',
+        activity: 'Matches compétiteurs interclubs',
         time: '20h45 - 23h',
         courts: '7 terrains',
       },
@@ -63,7 +63,7 @@ export const scheduleRows = [
         courts: '4 terrains',
       },
       {
-        activity: 'Jeu libre et parents-enfants',
+        activity: 'Jeu libre et badminton parents-enfants',
         time: '10h - 13h',
         courts: '3 terrains, puis 7 terrains à partir de 12h',
       },

@@ -176,8 +176,8 @@ function HomePage() {
         <ScheduleTable />
         <div className="location-band">
           <div>
-            <h3>Espace José Escanez</h3>
-            <p>Le lieu d'entraînement principal du club pour la saison.</p>
+            <h3>Le Gymnase : Espace José Escanez</h3>
+            <p>Avenue des Lauzières, 04160 Château-Arnoux-Saint-Auban.</p>
           </div>
           <iframe
             className="location-map"
@@ -301,7 +301,6 @@ function ScheduleTable() {
     <div className="schedule-card" aria-label="Horaires des séances">
       <div className="schedule-card-header">
         <h3>Horaires des séances</h3>
-        <span>Mise à jour saison 2026-2027</span>
       </div>
       <div className="schedule-table-wrap">
         <table className="schedule-table">
