@@ -145,7 +145,11 @@ export const affiliations = [
   ['Bad04', 'affiliation-bad04.jpg', 'https://myffbad.fr/club/2423'],
 ];
 
-export const textileImages = ['textile-1.png', 'textile-2.png', 'textile-3.png', 'textile-4.png'];
+export const textileImages = [
+  'textiles-2025-2027/textiles-2025-2027-01.jpg',
+  'textiles-2025-2027/textiles-2025-2027-02.jpg',
+  'textiles-2025-2027/textiles-2025-2027-03.jpg',
+];
 
 const mediaImages = ['media-1.jpg', 'media-2.jpg', 'media-3.jpg', 'media-4.jpg', 'media-5.jpg'];
 
