@@ -248,7 +248,7 @@ p {
 
 .offer-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -256,13 +256,20 @@ p {
   min-height: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
   box-shadow: 0 10px 24px rgba(17, 17, 17, 0.06);
   font-weight: 850;
+  text-align: center;
+}
+
+.offer-card span {
+  white-space: pre-line;
 }
 
 .offer-card svg {
@@ -359,7 +366,7 @@ p {
 
 .schedule-table {
   width: 100%;
-  min-width: 680px;
+  min-width: 760px;
   border-collapse: collapse;
   font-size: 1rem;
 }
@@ -382,6 +389,11 @@ p {
   width: 140px;
   color: var(--red);
   font-weight: 950;
+}
+
+.schedule-time-cell,
+.schedule-courts-cell {
+  white-space: nowrap;
 }
 
 .schedule-table tbody tr:nth-child(even) {
@@ -486,14 +498,8 @@ p {
   color: var(--white);
 }
 
-.location-band img {
-  width: min(280px, 42vw);
-  aspect-ratio: 5 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 .location-band p {
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -1127,16 +1133,15 @@ p {
 
   .offer-card {
     min-height: 0;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 16px;
   }
 
   .offer-card svg {
     flex: 0 0 auto;
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .offer-card span {
@@ -1160,10 +1165,6 @@ p {
   }
 
   .tryout-actions {
-    width: 100%;
-  }
-
-  .location-band img {
     width: 100%;
   }
 
@@ -1220,6 +1221,39 @@ p {
 
   .schedule-mobile-list {
     padding: 14px;
+  }
+
+  .schedule-mobile-sessions {
+    display: grid;
+    gap: 10px;
+  }
+
+  .schedule-mobile-session {
+    display: grid;
+    gap: 3px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+
+  .schedule-mobile-session:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .schedule-mobile-session strong {
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .schedule-mobile-session span {
+    color: var(--red);
+    font-weight: 950;
+  }
+
+  .schedule-mobile-session small {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 800;
   }
 
   .schedule-mobile-card:nth-child(even),

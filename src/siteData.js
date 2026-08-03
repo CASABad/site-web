@@ -16,27 +16,58 @@ export const contactInfo = {
 export const scheduleRows = [
   {
     day: 'Mardi',
-    activity: 'Jeu libre',
-    place: 'Espace José Escanez',
-    time: '21h - 23h',
+    sessions: [
+      {
+        activity: 'Jeu libre',
+        time: '21h - 23h',
+        courts: '7 terrains',
+      },
+    ],
   },
   {
     day: 'Mercredi',
-    activity: 'Entraînement, jeu libre',
-    place: 'Espace José Escanez',
-    time: '20h - 23h',
+    sessions: [
+      {
+        activity: 'Entraînement tous niveaux',
+        time: '20h - 21h15',
+        courts: '7 terrains',
+      },
+      {
+        activity: 'Jeu libre',
+        time: '21h15 - 23h',
+        courts: '7 terrains',
+      },
+    ],
   },
   {
     day: 'Jeudi',
-    activity: 'Entraînement compétition',
-    place: 'Espace José Escanez',
-    time: '19h - 23h',
+    sessions: [
+      {
+        activity: 'Entraînement compétiteur interclubs',
+        time: '19h - 20h45',
+        courts: '7 terrains',
+      },
+      {
+        activity: 'Match compétiteur interclubs',
+        time: '20h45 - 23h',
+        courts: '7 terrains',
+      },
+    ],
   },
   {
     day: 'Samedi',
-    activity: 'Jeu libre et en famille',
-    place: 'Espace José Escanez',
-    time: '10h - 13h',
+    sessions: [
+      {
+        activity: 'École de badminton',
+        time: '10h - 12h',
+        courts: '4 terrains',
+      },
+      {
+        activity: 'Jeu libre et parents-enfants',
+        time: '10h - 13h',
+        courts: '3 terrains, puis 7 terrains à partir de 12h',
+      },
+    ],
   },
 ];
 

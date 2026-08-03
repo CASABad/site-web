@@ -100,23 +100,23 @@ function HomePage() {
           <p className="eyebrow">Association sportive de badminton</p>
           <h1>CASA'Bad</h1>
           <p>
-            Un club adulte convivial pour progresser, transpirer, jouer en loisir ou en compétition
+            Un club convivial pour progresser, transpirer, jouer en loisir ou en compétition
             dans les Alpes-de-Haute-Provence.
           </p>
         </div>
       </section>
 
       <section className="quick-strip" aria-label="Informations principales">
-        <InfoPill icon={<Users />} label="Adultes et +16 ans" />
+        <InfoPill icon={<Users />} label="De 8 à 88 ans" />
         <InfoPill icon={<Check />} label="3 séances d'essai offertes" />
-        <InfoPill icon={<Trophy />} label="Loisir et compétition" />
+        <InfoPill icon={<Trophy />} label="Compétition et Loisir" />
         <InfoPill icon={<MapPin />} label="Espace José Escanez" />
       </section>
 
       <section className="section split-section">
         <div>
           <p className="eyebrow dark">Notre ADN</p>
-          <h2>Repartir avec le sourire, et un peu plus de badminton dans les jambes.</h2>
+          <h2>Repartir avec le sourire et un peu plus de badminton dans les jambes.</h2>
         </div>
         <div className="copy-block">
           <p>
@@ -137,10 +137,10 @@ function HomePage() {
         <div className="offer-grid">
           {[
             'Des entraînements adultes pour tous les niveaux',
-            'Des séances spécifiques pour les compétiteurs',
-            'De la pratique loisir',
-            'De la pratique parents-enfants',
-            'Des compétitions par équipes, amicales et fédérales',
+            'Des entraînements pour les compétiteurs interclubs',
+            'De la pratique de loisir\nDe la pratique parents-enfants.',
+            'Une école française de badminton pour les jeunes à partir de 8 ans',
+            'Des compétitions par équipes et des tournois amicaux',
           ].map((text) => (
             <article className="offer-card" key={text}>
               <Check size={18} />
@@ -175,7 +175,6 @@ function HomePage() {
         </div>
         <ScheduleTable />
         <div className="location-band">
-          <img src={asset('espace-jose-escanez.png')} alt="Espace José Escanez" />
           <div>
             <h3>Espace José Escanez</h3>
             <p>Le lieu d'entraînement principal du club pour la saison.</p>
@@ -303,19 +302,25 @@ function ScheduleTable() {
             <tr>
               <th>Jour</th>
               <th>Activités</th>
-              <th>Lieux</th>
               <th>Horaires</th>
+              <th>Terrains</th>
             </tr>
           </thead>
           <tbody>
-            {scheduleRows.map((row) => (
-              <tr key={row.day}>
-                <th scope="row">{row.day}</th>
-                <td>{row.activity}</td>
-                <td>{row.place}</td>
-                <td>{row.time}</td>
-              </tr>
-            ))}
+            {scheduleRows.flatMap((row) =>
+              row.sessions.map((session, index) => (
+                <tr key={`${row.day}-${session.activity}`}>
+                  {index === 0 ? (
+                    <th scope="row" rowSpan={row.sessions.length}>
+                      {row.day}
+                    </th>
+                  ) : null}
+                  <td>{session.activity}</td>
+                  <td className="schedule-time-cell">{session.time}</td>
+                  <td className="schedule-courts-cell">{session.courts}</td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>
@@ -324,18 +329,16 @@ function ScheduleTable() {
           <article className="mobile-data-card schedule-mobile-card" key={row.day}>
             <div className="mobile-data-card-title">
               <h4>{row.day}</h4>
-              <strong>{row.time}</strong>
             </div>
-            <dl>
-              <div>
-                <dt>Activités</dt>
-                <dd>{row.activity}</dd>
-              </div>
-              <div>
-                <dt>Lieu</dt>
-                <dd>{row.place}</dd>
-              </div>
-            </dl>
+            <div className="schedule-mobile-sessions">
+              {row.sessions.map((session) => (
+                <div className="schedule-mobile-session" key={session.activity}>
+                  <strong>{session.activity}</strong>
+                  <span>{session.time}</span>
+                  <small>{session.courts}</small>
+                </div>
+              ))}
+            </div>
           </article>
         ))}
       </div>
