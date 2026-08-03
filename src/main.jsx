@@ -100,7 +100,7 @@ function HomePage() {
           <p className="eyebrow">Association sportive de badminton</p>
           <h1>CASA'Bad</h1>
           <p>
-            Un club adulte convivial pour progresser, transpirer, jouer en loisir ou en competition
+            Un club adulte convivial pour progresser, transpirer, jouer en loisir ou en compétition
             dans les Alpes-de-Haute-Provence.
           </p>
         </div>
@@ -108,9 +108,9 @@ function HomePage() {
 
       <section className="quick-strip" aria-label="Informations principales">
         <InfoPill icon={<Users />} label="Adultes et +16 ans" />
-        <InfoPill icon={<Check />} label="3 seances d'essai offertes" />
-        <InfoPill icon={<Trophy />} label="Loisir et competition" />
-        <InfoPill icon={<MapPin />} label="Espace Jose Escanez" />
+        <InfoPill icon={<Check />} label="3 séances d'essai offertes" />
+        <InfoPill icon={<Trophy />} label="Loisir et compétition" />
+        <InfoPill icon={<MapPin />} label="Espace José Escanez" />
       </section>
 
       <section className="section split-section">
@@ -120,14 +120,14 @@ function HomePage() {
         </div>
         <div className="copy-block">
           <p>
-            CASA'Bad est un club de badminton qui a vu le jour en avril 2023. Cree par quatre
-            passionnes animes d'une idee commune, celle de promouvoir ce sport dans les
+            CASA'Bad est un club de badminton qui a vu le jour en avril 2023. Créé par quatre
+            passionnés animés d'une idée commune, celle de promouvoir ce sport dans les
             Alpes-de-Haute-Provence.
           </p>
           <p>
-            La politique du club repose sur un contrat moral avec chaque adherent : garantir une
-            bonne dose de transpiration, repartir de l'entrainement avec un large sourire et se
-            sentir plus competent apres qu'avant.
+            La politique du club repose sur un contrat moral avec chaque adhérent : garantir une
+            bonne dose de transpiration, repartir de l'entraînement avec un large sourire et se
+            sentir plus compétent après qu'avant.
           </p>
         </div>
       </section>
@@ -136,11 +136,11 @@ function HomePage() {
         <h2>CASA'Bad vous propose</h2>
         <div className="offer-grid">
           {[
-            'Des entrainements adultes pour tous les niveaux',
-            'Des seances specifiques pour les competiteurs',
+            'Des entraînements adultes pour tous les niveaux',
+            'Des séances spécifiques pour les compétiteurs',
             'De la pratique loisir',
             'De la pratique parents-enfants',
-            'Des competitions par equipes, amicales et federales',
+            'Des compétitions par équipes, amicales et fédérales',
           ].map((text) => (
             <article className="offer-card" key={text}>
               <Check size={18} />
@@ -153,7 +153,7 @@ function HomePage() {
       <section className="tryout-band" aria-label="Essai au club">
         <div>
           <p className="eyebrow">Envie d'essayer ?</p>
-          <h2>3 seances pour decouvrir le club avant de se lancer.</h2>
+          <h2>3 séances pour découvrir le club avant de se lancer.</h2>
         </div>
         <div className="tryout-actions">
           <a className="secondary-button" href="#contact">
@@ -169,22 +169,22 @@ function HomePage() {
         <div className="section-heading-row">
           <div>
             <p className="eyebrow dark">Saison 2026-2027</p>
-            <h2>Lieux d'entrainement et horaires</h2>
+            <h2>Lieux d'entraînement et horaires</h2>
           </div>
           <CalendarDays size={32} />
         </div>
         <ScheduleTable />
         <div className="location-band">
-          <img src={asset('espace-jose-escanez.png')} alt="Espace Jose Escanez" />
+          <img src={asset('espace-jose-escanez.png')} alt="Espace José Escanez" />
           <div>
-            <h3>Espace Jose Escanez</h3>
-            <p>Le lieu d'entrainement principal du club pour la saison.</p>
+            <h3>Espace José Escanez</h3>
+            <p>Le lieu d'entraînement principal du club pour la saison.</p>
           </div>
         </div>
       </section>
 
       <section className="section pricing-section">
-        <p className="eyebrow dark">Adhesion</p>
+        <p className="eyebrow dark">Adhésion</p>
         <h2>Tarifs saison {pricingInfo.season}</h2>
         <PricingTables />
         <div className="button-row">
@@ -215,9 +215,9 @@ function PricingTables() {
           <thead>
             <tr>
               <th>Licence</th>
-              <th>Age requis</th>
+              <th>Âge requis</th>
               <th>Tarif</th>
-              <th>Accessibilite</th>
+              <th>Accessibilité</th>
             </tr>
           </thead>
           <tbody>
@@ -241,11 +241,11 @@ function PricingTables() {
             </div>
             <dl>
               <div>
-                <dt>Age requis</dt>
+                <dt>Âge requis</dt>
                 <dd>{license.age}</dd>
               </div>
               <div>
-                <dt>Accessibilite</dt>
+                <dt>Accessibilité</dt>
                 <dd>{license.accessibility}</dd>
               </div>
             </dl>
@@ -292,17 +292,17 @@ function PricingTables() {
 
 function ScheduleTable() {
   return (
-    <div className="schedule-card" aria-label="Horaires des seances">
+    <div className="schedule-card" aria-label="Horaires des séances">
       <div className="schedule-card-header">
-        <h3>Horaires des seances</h3>
-        <span>Mise a jour saison 2026-2027</span>
+        <h3>Horaires des séances</h3>
+        <span>Mise à jour saison 2026-2027</span>
       </div>
       <div className="schedule-table-wrap">
         <table className="schedule-table">
           <thead>
             <tr>
               <th>Jour</th>
-              <th>Activites</th>
+              <th>Activités</th>
               <th>Lieux</th>
               <th>Horaires</th>
             </tr>
@@ -319,7 +319,7 @@ function ScheduleTable() {
           </tbody>
         </table>
       </div>
-      <div className="mobile-card-list schedule-mobile-list" aria-label="Horaires des seances">
+      <div className="mobile-card-list schedule-mobile-list" aria-label="Horaires des séances">
         {scheduleRows.map((row) => (
           <article className="mobile-data-card schedule-mobile-card" key={row.day}>
             <div className="mobile-data-card-title">
@@ -328,7 +328,7 @@ function ScheduleTable() {
             </div>
             <dl>
               <div>
-                <dt>Activites</dt>
+                <dt>Activités</dt>
                 <dd>{row.activity}</dd>
               </div>
               <div>
@@ -357,10 +357,10 @@ function ClubNetworkSection() {
     <section className="club-network">
       <div className="network-intro">
         <p className="eyebrow dark">Autour du club</p>
-        <h2>Suivez CASA'Bad et decouvrez ceux qui nous accompagnent.</h2>
+        <h2>Suivez CASA'Bad et découvrez ceux qui nous accompagnent.</h2>
         <p>
-          Les actus du club vivent aussi sur les reseaux. Nos partenaires et affiliations font
-          tourner le badminton local avec nous, saison apres saison.
+          Les actus du club vivent aussi sur les réseaux. Nos partenaires et affiliations font
+          tourner le badminton local avec nous, saison après saison.
         </p>
         <SocialSection />
         <a className="partner-cta" href="#contact">
@@ -433,7 +433,7 @@ function TextilesPage() {
     <PageShell
       eyebrow="Boutique club"
       title="Textiles club"
-      intro="Les textiles CASA'Bad pour afficher les couleurs du club aux entrainements, en tournoi et sur les rencontres par equipes."
+      intro="Les textiles CASA'Bad pour afficher les couleurs du club aux entraînements, en tournoi et sur les rencontres par équipes."
       heroImage="hero-textiles.png"
       heroPosition="center"
     >
@@ -453,7 +453,7 @@ function MediasPage() {
   return (
     <PageShell
       eyebrow="Vie du club"
-      title="Medias"
+      title="Médias"
       intro="Photos des rencontres, tournois et temps forts du club."
       heroImage="hero-medias.jpeg"
       heroPosition="center"
@@ -494,8 +494,8 @@ function MediasPage() {
         </div>
       ) : (
         <div className="empty-album">
-          <h3>Album a completer</h3>
-          <p>Les photos de cet album seront ajoutees prochainement.</p>
+          <h3>Album à compléter</h3>
+          <p>Les photos de cet album seront ajoutées prochainement.</p>
         </div>
       )}
     </PageShell>
@@ -509,7 +509,7 @@ function ClubMusicCard() {
       <div className="club-music-content">
         <p className="eyebrow dark">Musique du club</p>
         <h2>CASA'Bad</h2>
-        <p>La bande son officielle du club, a ecouter avant les entrainements, les rencontres et les tournois.</p>
+        <p>La bande son officielle du club, à écouter avant les entraînements, les rencontres et les tournois.</p>
         <audio controls preload="metadata">
           <source src={asset('audio/casa-bad.mp3')} type="audio/mpeg" />
           Votre navigateur ne peut pas lire ce fichier audio.
@@ -522,23 +522,23 @@ function ClubMusicCard() {
 
 function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const mailto = `mailto:${contactInfo.email}?subject=${encodeURIComponent(form.subject || 'Contact CASA Bad')}&body=${encodeURIComponent(`Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+  const mailto = `mailto:${contactInfo.email}?subject=${encodeURIComponent(form.subject || 'Contact CASA Bad')}&body=${encodeURIComponent(`Nom: ${form.name}\nE-mail: ${form.email}\n\n${form.message}`)}`;
 
   return (
-    <PageShell eyebrow="Contact" title="Nous contacter" intro="Une question sur les essais, les horaires, l'inscription ou les competitions ? Ecrivez-nous directement.">
+    <PageShell eyebrow="Contact" title="Nous contacter" intro="Une question sur les essais, les horaires, l'inscription ou les compétitions ? Écrivez-nous directement.">
       <section className="contact-layout">
         <div className="contact-methods">
           <a href={`mailto:${contactInfo.email}`}>
             <Mail size={22} />
             <span>
-              <strong>Email de contact</strong>
+              <strong>E-mail de contact</strong>
               {contactInfo.email}
             </span>
           </a>
           <a href={`tel:${contactInfo.phoneHref}`}>
             <Phone size={22} />
             <span>
-              <strong>Contact telephonique</strong>
+              <strong>Contact téléphonique</strong>
               {contactInfo.phoneLabel}
             </span>
           </a>
@@ -557,7 +557,7 @@ function ContactPage() {
             <input value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} />
           </label>
           <label>
-            Email
+            E-mail
             <input type="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} />
           </label>
           <label>
@@ -569,7 +569,7 @@ function ContactPage() {
             <textarea rows="6" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} />
           </label>
           <a className="primary-button form-submit" href={mailto}>
-            Envoyer par email <Mail size={18} />
+            Envoyer par e-mail <Mail size={18} />
           </a>
         </form>
       </section>
@@ -607,7 +607,7 @@ function Footer() {
       </div>
       <div className="footer-links">
         <a className="footer-action" href="#contact">Nous contacter</a>
-        <div className="footer-socials" aria-label="Reseaux sociaux">
+        <div className="footer-socials" aria-label="Réseaux sociaux">
           <a href="https://www.instagram.com/casabad_04/" target="_blank" rel="noreferrer" aria-label="Instagram CASA'Bad">
             <Instagram size={18} />
           </a>

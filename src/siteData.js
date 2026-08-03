@@ -1,7 +1,7 @@
 export const navItems = [
   { id: 'accueil', label: 'Accueil' },
   { id: 'textiles', label: 'Textiles club' },
-  { id: 'medias', label: 'Medias' },
+  { id: 'medias', label: 'Médias' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -17,25 +17,25 @@ export const scheduleRows = [
   {
     day: 'Mardi',
     activity: 'Jeu libre',
-    place: 'Espace Jose Escanez',
+    place: 'Espace José Escanez',
     time: '21h - 23h',
   },
   {
     day: 'Mercredi',
-    activity: 'Entrainement, jeu libre',
-    place: 'Espace Jose Escanez',
+    activity: 'Entraînement, jeu libre',
+    place: 'Espace José Escanez',
     time: '20h - 23h',
   },
   {
     day: 'Jeudi',
-    activity: 'Entrainement competition',
-    place: 'Espace Jose Escanez',
+    activity: 'Entraînement compétition',
+    place: 'Espace José Escanez',
     time: '19h - 23h',
   },
   {
     day: 'Samedi',
     activity: 'Jeu libre et en famille',
-    place: 'Espace Jose Escanez',
+    place: 'Espace José Escanez',
     time: '10h - 13h',
   },
 ];
@@ -43,48 +43,48 @@ export const scheduleRows = [
 export const pricingInfo = {
   season: '2025-2026',
   intro: [
-    "La cotisation d'adhesion inclut la licence federale FFBad avec son assurance en responsabilite civile standard, ainsi que l'adhesion au club.",
-    "Le certificat medical n'est pas obligatoire sous reserve de repondre favorablement au questionnaire de sante.",
+    "La cotisation d'adhésion inclut la licence fédérale FFBad avec son assurance en responsabilité civile standard, ainsi que l'adhésion au club.",
+    "Le certificat médical n'est pas obligatoire sous réserve de répondre favorablement au questionnaire de santé.",
   ],
   licenses: [
     {
       name: 'Adulte',
-      age: 'A partir de 18 ans',
+      age: 'À partir de 18 ans',
       price: '130 €',
-      accessibility: 'Acces a tous les creneaux et aux entrainements diriges pour le creneau competiteurs, acces sous condition.',
+      accessibility: 'Accès à tous les créneaux et aux entraînements dirigés pour le créneau compétiteurs, accès sous condition.',
     },
     {
       name: 'Jeune',
       age: '16 - 18 ans',
       price: '100 €',
-      accessibility: 'Acces a tous les creneaux et aux entrainements diriges pour le creneau competiteurs, acces sous condition, voir directement avec le club.',
+      accessibility: 'Accès à tous les créneaux et aux entraînements dirigés pour le créneau compétiteurs, accès sous condition, voir directement avec le club.',
     },
     {
       name: 'Enfant',
       age: '8 - 16 ans',
       price: '60 €',
-      accessibility: "Samedi matin en jeu libre uniquement et sous la responsabilite d'un adulte licencie au club et designe par le parent.",
+      accessibility: "Samedi matin en jeu libre uniquement et sous la responsabilité d'un adulte licencié au club et désigné par le parent.",
     },
     {
-      name: 'Exterieure',
-      age: 'Joueur licencie dans un autre club affilie FFBad',
+      name: 'Extérieure',
+      age: 'Joueur licencié dans un autre club affilié FFBad',
       price: '60 €',
-      accessibility: "Acces a la pratique de loisir mardi, mercredi et samedi, sans acces aux horaires d'entrainements diriges.",
+      accessibility: "Accès à la pratique de loisir mardi, mercredi et samedi, sans accès aux horaires d'entraînements dirigés.",
     },
   ],
   benefits: [
     {
-      name: 'e-PASS jeunes (Region Sud)',
+      name: 'e-PASS jeunes (Région Sud)',
       amount: '',
-      description: "Le e-PASS jeune de la region est pris en compte ; le club procede au remboursement de l'aide directement au joueur une fois celle-ci percue.",
+      description: "Le e-PASS jeune de la région est pris en compte ; le club procède au remboursement de l'aide directement au joueur une fois celle-ci perçue.",
     },
     {
       name: 'Avantage famille',
       amount: '5 €',
-      description: "La reduction est appliquee sur chaque licence supplementaire a partir de la deuxieme licence souscrite pour un meme foyer.",
+      description: "La réduction est appliquée sur chaque licence supplémentaire à partir de la deuxième licence souscrite pour un même foyer.",
     },
   ],
-  note: 'Les reductions sont cumulables.',
+  note: 'Les réductions sont cumulables.',
 };
 
 export const partners = [
@@ -94,7 +94,7 @@ export const partners = [
   ['Payan Espaces Verts', 'partenaire-payan.jpg', 'https://www.facebook.com/p/PAYAN-Espaces-Verts-100091738812182/'],
   ['Lesbros', 'partenaire-lesbros.png', 'https://www.dekra-norisko.fr/dekra/controle-technique/chateau-arnoux-saint-auban,04160/avenue-de-blaches-gombert?S004D036'],
   ['Alpes Piscine Services', 'partenaire-aps.png', 'https://www.aps04.com/'],
-  ['Dekra Chateau-Arnoux', 'partenaire-dekra.png', 'https://www.dekra-norisko.fr/dekra/controle-technique/chateau-arnoux-saint-auban,04160/avenue-de-blaches-gombert?S004D036'],
+  ['Dekra Château-Arnoux', 'partenaire-dekra.png', 'https://www.dekra-norisko.fr/dekra/controle-technique/chateau-arnoux-saint-auban,04160/avenue-de-blaches-gombert?S004D036'],
   ['Ferronnerie Lecocq', 'partenaire-lecocq.png', 'https://www.ferronnerie-lecocq-04.fr/'],
 ];
 

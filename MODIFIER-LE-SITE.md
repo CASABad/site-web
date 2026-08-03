@@ -35,7 +35,7 @@ Dans `src/siteData.js`, changer les lignes dans `scheduleRows` :
 {
   day: 'Mardi',
   activity: 'Jeu libre',
-  place: 'Espace Jose Escanez',
+  place: 'Espace José Escanez',
   time: '21h - 23h',
 },
 ```
@@ -103,7 +103,7 @@ Pour un tournoi, mettre `group: 'Tournois'`.
 
 ## A garder dans un endroit sur
 
-- Acces Hostinger pour le domaine `casabad.fr`.
-- Acces GitHub organisation `CASABad`.
-- Acces Vercel projet `site-web`.
-- Adresse email officielle du club quand elle sera creee.
+- Accès Hostinger pour le domaine `casabad.fr`.
+- Accès GitHub organisation `CASABad`.
+- Accès Vercel projet `site-web`.
+- Adresse e-mail officielle du club quand elle sera créée.

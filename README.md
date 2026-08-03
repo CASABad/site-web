@@ -29,4 +29,4 @@ Vercel donnera les valeurs exactes, generalement :
 - un enregistrement `A` pour le domaine racine ;
 - un enregistrement `CNAME` pour `www`.
 
-Faire la bascule DNS apres validation du site, pour eviter une coupure inutile.
+Faire la bascule DNS après validation du site, pour éviter une coupure inutile.

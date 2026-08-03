@@ -15,7 +15,7 @@ Final result: passed
 - Desktop home page renders with no broken images.
 - Mobile home page renders with no broken images.
 - Mobile menu opens and exposes the navigation.
-- Hash navigation works for Accueil, Textiles club, Medias and Contact.
+- Hash navigation works for Accueil, Textiles club, Médias and Contact.
 - Contact form produces a `mailto:` link to `contact.casabad@gmail.com`.
 - License links point to MyFFBad for new and renewed licenses.
 
