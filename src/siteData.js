@@ -170,6 +170,7 @@ const instagramSeason2025Images = [
 ];
 
 const plumes2026Images = [
+  'affiches-plumes/plumes-2026-affiche.jpeg',
   'plumes-2026/plumes-2026-01.jpeg',
   'plumes-2026/plumes-2026-02.jpeg',
   'plumes-2026/plumes-2026-03.jpeg',
@@ -223,6 +224,20 @@ const plumes2026Images = [
   'plumes-2026/plumes-2026-51.jpeg',
 ];
 
+const avisTournoiImages = [
+  'avis-tournoi/avis-tournoi-recap.jpeg',
+  'avis-tournoi/avis-tournoi-elodie.jpeg',
+  'avis-tournoi/avis-tournoi-nicolas.jpeg',
+];
+
+const plumesVideos = [
+  {
+    type: 'video',
+    src: 'videos/les-plumes.mp4',
+    poster: 'affiches-plumes/plumes-2026-affiche.jpeg',
+  },
+];
+
 export const mediaAlbums = [
   {
     id: 'saison-2025-2026',
@@ -239,6 +254,20 @@ export const mediaAlbums = [
     images: plumes2026Images,
   },
   {
+    id: 'avis-tournoi',
+    group: 'Tournois',
+    label: 'Avis tournoi',
+    title: 'Avis tournoi',
+    images: avisTournoiImages,
+  },
+  {
+    id: 'video-plumes',
+    group: 'Tournois',
+    label: 'Vidéo Les Plumes',
+    title: 'Vidéo Les Plumes',
+    images: plumesVideos,
+  },
+  {
     id: 'saison-2024-2025',
     group: 'Saisons',
     label: 'Saison 2024-2025',
@@ -250,7 +279,7 @@ export const mediaAlbums = [
     group: 'Tournois',
     label: 'Les Plumes 2025',
     title: 'Les Plumes 2025',
-    images: [],
+    images: ['affiches-plumes/plumes-2025-affiche.jpeg'],
   },
   {
     id: 'saison-2023-2024',
@@ -264,6 +293,6 @@ export const mediaAlbums = [
     group: 'Tournois',
     label: 'Les Plumes 2024',
     title: 'Les Plumes 2024',
-    images: [],
+    images: ['affiches-plumes/plumes-2024-affiche.png'],
   },
 ];

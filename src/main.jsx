@@ -451,6 +451,7 @@ function TextilesPage() {
 function MediasPage() {
   const [album, setAlbum] = useState('plumes-2026');
   const activeAlbum = mediaAlbums.find((item) => item.id === album) || mediaAlbums[0];
+  const mediaCountLabel = activeAlbum.images.length > 1 ? 'médias' : 'média';
 
   return (
     <PageShell
@@ -486,12 +487,12 @@ function MediasPage() {
       </div>
       <div className="album-heading">
         <h2 className="subheading">{activeAlbum.title}</h2>
-        <span>{activeAlbum.images.length} photos</span>
+        <span>{activeAlbum.images.length} {mediaCountLabel}</span>
       </div>
       {activeAlbum.images.length > 0 ? (
         <div className="masonry">
-          {activeAlbum.images.map((image, index) => (
-            <img key={image} src={asset(image)} alt={`${activeAlbum.title} CASA'Bad ${index + 1}`} loading="lazy" />
+          {activeAlbum.images.map((item, index) => (
+            <MediaItem key={typeof item === 'string' ? item : item.src} item={item} title={activeAlbum.title} index={index} />
           ))}
         </div>
       ) : (
@@ -502,6 +503,23 @@ function MediasPage() {
       )}
     </PageShell>
   );
+}
+
+function MediaItem({ item, title, index }) {
+  if (typeof item === 'string') {
+    return <img src={asset(item)} alt={`${title} CASA'Bad ${index + 1}`} loading="lazy" />;
+  }
+
+  if (item.type === 'video') {
+    return (
+      <video className="media-video" controls preload="metadata" poster={item.poster ? asset(item.poster) : undefined}>
+        <source src={asset(item.src)} type="video/mp4" />
+        Votre navigateur ne peut pas lire cette vidéo.
+      </video>
+    );
+  }
+
+  return null;
 }
 
 function ClubMusicCard() {
