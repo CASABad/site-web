@@ -50,8 +50,29 @@ img {
   backdrop-filter: blur(16px);
 }
 
-.brand img {
-  width: min(220px, 54vw);
+.brand,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brand-wordmark {
+  color: var(--white);
+  font-size: 3.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-apostrophe {
+  color: var(--red);
 }
 
 .main-nav {
@@ -1012,14 +1033,18 @@ p {
 
 .footer-brand {
   flex: 0 0 auto;
-  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--ink);
 }
 
-.footer-brand img {
-  width: 142px;
-  padding: 9px 11px;
-  border-radius: 12px;
-  background: var(--ink);
+.footer-brand .brand-mark {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-brand .brand-wordmark {
+  font-size: 2.55rem;
 }
 
 .footer-center {
@@ -1349,8 +1374,17 @@ p {
     min-height: 74px;
   }
 
-  .brand img {
-    width: 174px;
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-wordmark {
+    font-size: 2.85rem;
   }
 
   .main-nav {

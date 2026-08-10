@@ -71,7 +71,7 @@ function Header({ active, menuOpen, setMenuOpen }) {
   return (
     <header className="site-header">
       <a className="brand" href="#accueil" aria-label="Accueil CASA'Bad">
-        <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
+        <LogoLockup />
       </a>
       <nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Navigation principale">
         {navItems.map((item) => (
@@ -90,6 +90,17 @@ function Header({ active, menuOpen, setMenuOpen }) {
   );
 }
 
+function LogoLockup() {
+  return (
+    <>
+      <img className="brand-mark" src={asset('logo-volant-seul.png')} alt="" aria-hidden="true" />
+      <span className="brand-wordmark">
+        CASA<span className="brand-apostrophe">'</span>BAD
+      </span>
+    </>
+  );
+}
+
 function HomePage() {
   return (
     <>
@@ -98,7 +109,7 @@ function HomePage() {
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="eyebrow">Association sportive de badminton</p>
-          <h1>CASA'Bad</h1>
+          <h1>CASA<span className="brand-apostrophe">'</span>Bad</h1>
           <p>
             Un club convivial pour progresser, transpirer, jouer en loisir ou en compétition
             dans les Alpes-de-Haute-Provence.
@@ -592,7 +603,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-identity">
         <a className="footer-brand" href="#accueil" aria-label="Accueil CASA'Bad">
-          <img src={asset('logo-casabad.png')} alt="CASA'Bad" />
+          <LogoLockup />
         </a>
         <p className="footer-center">Association Sportive Badminton - Alpes-de-Haute-Provence</p>
       </div>
